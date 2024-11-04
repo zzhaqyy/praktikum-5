@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: #333;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                background-color: white;
+                top: 60px; 
+                right: 0;
+                width: 100%;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-800">
+    <header class="fixed top-0 left-0 right-0 z-10 flex justify-between items-center p-6 bg-white">
+        <div class="flex items-center space-x-3">
+            <img src="./src/icon_logo.png" alt="Logo" class="h-8 w-8">
+            <h1 class="text-lg font-semibold">Remind<span class="text-blue-500">me</span></h1>
+        </div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="nav" class="space-x-6 text-gray-700">
+            <a href="#" class="hover:text-blue-500">Home</a>
+            <a href="#" class="hover:text-blue-500">Features</a>
+            <a href="#" class="hover:text-blue-500">About Us</a>
+        </nav>
+        <button class="text-white bg-blue-500 px-4 py-2 rounded-full hover:bg-blue-950 hidden md:block">
+            About App
+        </button>
+    </header>
+
+    <section class="flex flex-col md:flex-row items-center py-32 px-6 md:px-16">
+        <div class="md:w-1/2 space-y-4">
+            <h2 class="text-4xl font-bold text-gray-900">
+                Manage Schedule and Task Easily
+            </h2>
+            <p class="text-gray-600">
+                Create and organize schedule and task deadlines to improve productivity and never miss any task again.
+            </p>
+            <button class="bg-blue-500 text-white px-6 py-3 rounded-full hover:bg-indigo-950">
+                Download App
+            </button>
+        </div>
+        <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+            <img src="./src/Hero Image.png" alt="App Preview" class="w-3/4">
+        </div>
+    </section>
+
+    <section class="py-16 px-6 md:px-16">
+        <div class="grid md:grid-cols-3 gap-8 text-center">
+            <div class="space-y-2">
+                <img src="./src/icon_calender.png" alt="Calendar Icon" class="mx-auto h-12 w-12">
+                <h3 class="text-lg font-semibold">Set Better Task Deadlines</h3>
+                <p class="text-gray-600">
+                    Organize task deadlines more efficiently.
+                </p>
+            </div>
+            <div class="space-y-2">
+                <img src="./src/icon_layer.png" alt="Layer Icon" class="mx-auto h-12 w-12">
+                <h3 class="text-lg font-semibold">Easily Manage Tasks</h3>
+                <p class="text-gray-600">Organize schedules with ease.</p>
+            </div>
+            <div class="space-y-2">
+                <img src="./src/icon_notification.png" alt="Notification Icon" class="mx-auto h-12 w-12">
+                <h3 class="text-lg font-semibold">Never Miss Notifications</h3>
+                <p class="text-gray-600">Receive timely notifications for tasks and schedules.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="flex flex-col md:flex-row items-center py-32 px-6 md:px-16">
+        <div class="md:w-1/2 flex justify-center mt-8 md:mt-0">
+            <img src="./src/img_preview2.png" alt="Feature Preview" class="w-full md:w-3/4 rounded-lg">
+        </div>
+        <div class="md:w-1/2 space-y-4 text-center md:text-left">
+            <h3 class="text-3xl font-bold">Set Up Tasks with the Best Features</h3>
+            <p class="text-gray-600">Organize schedules and tasks with powerful features designed to improve productivity. Get the app now!</p>
+        </div>
+    </section>
+
+    <section class="bg-white py-16 px-6 md:px-16 flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 text-left">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">Get High-Priority Notifications</h2>
+            <p class="text-gray-600 mb-6">Stay updated with the latest features to meet your needs and keep you organized.</p>
+        </div>
+        <div class="md:w-1/2 mt-8 md:mt-0 flex justify-center">
+            <img src="./src/Image.png" class="w-full md:w-3/4 rounded-lg" alt="Notification Feature Preview">
+        </div>
+    </section>
+
+    <div class="download-section container mx-auto px-8 py-16 bg-blue-500 text-white flex flex-col items-center rounded-[40px] mt-12">
+        <h3 id="about-us" class="text-2xl font-semibold mb-4 text-center max-w-xl">Download the app now and enjoy the benefits!</h3>
+        <div class="flex gap-4 mt-4">
+            <button class="bg-white text-blue-500 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-md">Download App</button>
+            <button class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-blue-500 transition-colors shadow-md">About App</button>
+        </div>
+    </div>
+
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+            <div class="relative bg-blue-50 p-8 rounded-[40px]">
+                <div class="relative w-full h-64 flex items-center justify-center">
+                    <img src="./src/img_testimoni.png" alt="Testimonial Image" class="w-full h-full object-cover rounded-[40px]">
+                </div>
+            </div>
+            
+            <div class="flex flex-col justify-center">
+                <h2 class="text-2xl font-bold mb-6">What Do Users Think</h2>
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="./src/img_profil_testi.png" alt="Profile Picture of Samantha" class="w-20 h-20 rounded-full mr-3">
+                        <div>
+                            <h3 class="font-semibold">Samantha Sench</h3>
+                            <p class="text-sm text-gray-600">Student at University</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">
+                        "Hi, I'm Samantha. This app has made task deadlines so much easier to manage. It’s incredibly user-friendly!"
+                    </p>
+                    <div class="flex space-x-2 mt-6 text-blue-500">
+                        <button class="text-2xl">&larr;</button>
+                        <button class="text-2xl">&rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <footer class="bg-gray-50 py-10 px-6 md:px-16 text-gray-800">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="flex items-center space-x-2 mb-4">
+                    <img src="./src/Logo.png" alt="Logo" class="h-8 w-8">
+                    <h1 class="text-lg font-semibold">Remind<span class="text-blue-500">me</span></h1>
+                </div>
+                <p class="text-gray-500">An app for managing task deadlines and schedules with a range of helpful features.</p>
+            </div>
+
+            <div>
+                <h3 class="font-semibold">Sitemaps</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Features</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">About Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <script>
+                    const hamburger = document.getElementById('hamburger');
+                    const nav = document.getElementById('nav');
+            
+                    hamburger.addEventListener('click', () => {
+                        nav.classList.toggle('show');
+                    });
+                </script>
+            </body>
+            </html>
